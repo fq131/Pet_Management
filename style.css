@@ -1,0 +1,337 @@
+body {
+  background: url(images/fq1.jpg) center center / cover no-repeat fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  }
+  
+  /* Buttons, containers and fonts */
+  button.link {
+    background-color: rgb(225, 190, 224);
+    font-weight: 500;
+    border-radius: 4vw;
+    padding: 1vw 3vw;
+    border: 0;
+  }
+  
+  button.link:hover {
+    transform: scale(1.1);
+  }
+ 
+  img:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+    color: black;
+    padding: 10;
+    font-size: 1.5rem;
+  }
+
+  .h1 {
+    font-family: "Poppins", sans-serif;
+    color: #040202;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .h3 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: normal;
+  }
+  
+  .cont-2 {
+    padding: 5px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    color: rgb(5, 5, 5);
+    flex-wrap: wrap;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  /* Header */
+  .header_section {
+    padding-top: 1px;
+  }
+  
+  nav.navbar.navbar-expand-lg {
+    padding: 10px 0;
+  }
+  
+  .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+  
+  .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
+    color: #000000;
+  }
+
+  /* Menu */
+  .custom_menu-btn {
+    z-index: 9;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+  }
+  
+  .custom_menu-btn button {
+    margin-top: 14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .custom_menu-btn button span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 7px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+  
+  .menu_btn-style {
+    position: fixed;
+    right: 29px;
+    top: 7px;
+  }
+  
+  .custom_menu-btn .s-2 {
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    width: 22px;
+    margin-left: auto;
+  }
+  
+  .menu_btn-style button .s-1 {
+    -webkit-transform: rotate(45deg) translateY(16px);
+            transform: rotate(45deg) translateY(16px);
+  }
+  
+  .menu_btn-style button .s-2 {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  
+  .menu_btn-style button .s-3 {
+    -webkit-transform: rotate(-45deg) translateY(-16px);
+            transform: rotate(-45deg) translateY(-16px);
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(198, 185, 243, 0.90);
+    overflow-x: hidden;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 60px;
+  }
+  
+  .overlay a {
+    padding: 0px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .menu_width {
+    width: 100%;
+  }
+  
+  .menu_width.overlay a {
+    opacity: 1;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    color: initial;
+  }
+
+  .btn,
+  .btn:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .top_container.sub_pages::before {
+    background-size: 400px 200px;
+    background-position: top left;
+  }
+  
+  .navbar-brand img {
+    width: 100px;
+    margin-left: 20px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom_nav-container {
+    z-index: 1;
+    padding: 15px 0;
+  }
+  
+  .custom_nav-container .navbar-toggler {
+    outline:none;
+  }
+  
+  .custom_nav-container .navbar-toggler .navbar-toggler-icon {
+    background-image: url(images/logo.jpg);
+    background-size: 40px;
+  }
+  
+  .custom_nav-container .navbar-toggler .navbar-toggler-icon {
+    background-size: 40px;
+  }
+
+  
+  /* Footer */
+  .container-2 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    background-color: #ec9ff693;
+    flex-wrap: wrap;
+  }
+  
+  .flex-container {
+    display: flex;
+    grid-gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .flex-child {
+    flex: 1;
+  }
+  
+  .flex-child:first-child {
+    margin-right: 20px;
+  }
+  
+
+  /* Responsive */
+  @media (max-width: 992px) {
+
+    .top_container {
+      height: auto;
+    }
+  
+    .top_container.sub_pages {
+      height: auto;
+    }
+  
+    .top_container.sub_pages::before {
+      background-size: cover;
+    }
+  
+    .top_container::before {
+      width: 200%;
+  
+    }
+  
+    .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link, .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+      color: black;
+    }
+    
+    .flex-child-1 {
+      flex-direction: column;
+    }
+  
+    .flex-container {
+      flex-direction: column;
+    }
+    
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 3vw;
+    }
+  
+    .h2 {
+      font-size: 4vw;
+    }
+    
+    .service-circle {
+      width: auto;
+      height: auto; 
+      margin-bottom: 20px;
+    }
+
+    .animal_container {
+      justify-content: center;
+    }
+
+    .animal_section {
+      justify-content: center;
+
+    }
+
+    .acontainer {
+      justify-content: center;
+    }
+
+    .cont-1 {
+      height: auto;
+    }
+  
+  
+  }
+  

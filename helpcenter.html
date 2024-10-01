@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--boostrap, jQuerstyle.y-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!-- JsSocials CDN -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+    <!-- JsSocials Icon -->
+    <script src="https://kit.fontawesome.com/13ccb33514.js" crossorigin="anonymous"></script>
+
+
+    <style>
+
+        .welcome-section {
+            background-image: url('images/pet.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Text color on the background */
+            text-align: center;
+            padding: 100px 0; /* Adjust the padding as needed */
+        }
+
+        .welcome-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(167, 159, 159, 0.7); /* Background color with opacity */
+            border-radius: 10px;
+        }
+
+        .welcome-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+
+        .faq-heading {
+            border-bottom: #777;
+            padding: 20px 60px;
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hr-line {
+            width: 60%;
+            margin: auto;
+        }
+
+        /* Style the buttons that are used to open and close the faq-page body */
+        .faq-page {
+            /* background-color: #eee; */
+            color: #444;
+            cursor: pointer;
+            padding: 30px 20px;
+            width: 60%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin: auto;
+        }
+
+        .faq-body {
+            margin: auto;
+            /* text-align: center; */
+            width: 50%;
+            padding: auto;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .activee,
+        .faq-page:hover {
+            background-color: #F9F9F9;
+        }
+
+        .faq-heading {
+            text-align: center; /* Center the text */
+            border-bottom: #777;
+            padding: 20px 0; /* Adjusted padding */
+}
+
+        /* Style the faq-page panel. Note: hidden by default */
+        .faq-body {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .faq-page:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .activee:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+
+        .search {
+            width: 100%;
+            display: flex; /* Use flexbox to align items horizontally */
+            align-items: center; /* Vertically center items */
+        }
+
+        /* Style the search input */
+        .search input[type="text"] {
+            flex: 1; /* Grow to take available space */
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+
+        .search button[type="submit"] {
+            border: none;
+            background: #00B4CC;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px; /* Adjust font size to match the search bar */
+            padding: 10px; /* Adjust padding to match the search bar */
+        }
+    </style>
+</head>
+
+<body onload="checkUser()">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="top_container sub_pages">
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/icon.png" alt="pet shop icon">
+                            </a>
+    
+                            <div class="custom_menu-btn ml-auto d-lg-none">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Our Service</a>
+                                <a href="AboutUs.html">About Us</a>
+                                <a href="helpcenter.html">Help Center</a>
+                                <a href="login.html" class="nav-link" id="login1">Login</a>
+                                <a href="login.html" class="nav-link d-none" id="logout1">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-lg-row align-items-center d-lg-block">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="service.html"> Our Service </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AboutUs.html"> About Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="helpcenter.html"> Help Center </a>
+                                </li>
+
+                                <li class="nav-item text-center">
+                                    <a id="login" class="nav-link" href="login.html">
+                                        Login
+                                    </a>
+                                </li>
+        
+                                <li class="nav-item text-center">
+                                    <a id="logout" class="nav-link d-none" href="login.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- Navigation button function -->
+    <script>
+        function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width")
+        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    }
+    </script>
+    <script>
+        // Function to check if local storage is available
+function isLocalStorageAvailable() {
+    try {
+        localStorage.setItem('test', 'test');
+        localStorage.removeItem('test');
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+// Function to check if cookies are available
+function areCookiesAvailable() {
+    return navigator.cookieEnabled;
+}
+
+// Check if local storage is available
+if (isLocalStorageAvailable()) {
+    // Local storage is available
+    const searchInput = document.querySelector('input[type="text"]');
+    const searchButton = document.querySelector('button[type="submit"]');
+
+    // Function to save the search query to local storage
+    function saveToLocalStorage(query) {
+        localStorage.setItem('searchQuery', query);
+    }
+
+    // Function to get the search query from local storage
+    function getFromLocalStorage() {
+        return localStorage.getItem('searchQuery') || '';
+    }
+
+    // Example: Save the search query when the user performs a search
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value;
+        saveToLocalStorage(query);
+    });
+
+    // Example: Populate the search input with the previous query on page load
+    window.addEventListener('load', function () {
+        const query = getFromLocalStorage();
+        searchInput.value = query;
+    });
+} else {
+    // Local storage is not available
+    console.log("Local storage is not available.");
+}
+
+// Check if cookies are available
+if (areCookiesAvailable()) {
+    // Cookies are available
+    // Function to save the search query to a cookie
+    function saveToCookie(query) {
+        document.cookie = `searchQuery=${encodeURIComponent(query)}`;
+    }
+
+    // Function to get the search query from a cookie
+    function getFromCookie() {
+        const name = 'searchQuery=';
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookieArray = decodedCookie.split(';');
+        for (let i = 0; i < cookieArray.length; i++) {
+            let cookie = cookieArray[i];
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        return '';
+    }
+
+    // Example: Save the search query to a cookie when the user performs a search
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value;
+        saveToCookie(query);
+    });
+
+    // Example: Populate the search input with the previous query from the cookie on page load
+    window.addEventListener('load', function () {
+        const query = getFromCookie();
+        searchInput.value = query;
+    });
+} else {
+    // Cookies are not available
+    console.log("Cookies are not available.");
+}
+    </script>
+
+
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Hello, Welcome to the Quby Pet Help Center!</h1>
+                <p>How can I help you today?</p>
+                <!-- Search bar code with a search button -->
+                <div class="search">
+                    <input type="text" placeholder="Find Your Answer">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+        
+
+        <h1 class="faq-heading">FAQ'S</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How do I schedule a pet grooming appointment?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>To schedule a pet grooming appointment, simply visit our website and click on the "Book Grooming"
+                        button. Follow the prompts to choose your preferred date and time, and our team will take care of
+                        the rest.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-two">
+
+                <!-- faq question -->
+                <h1 class="faq-page">What services do you offer for pet daycare?</h1>
+
+                <!-- faq answer -->
+
+                <div class="faq-body">
+                    <p>We offer a range of services for pet daycare, including supervised playtime, exercise,
+                        socialization, and feeding. Your pet will have a fun and safe day in our care.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+
+            <div class="faq-three">
+
+                <!-- faq question -->
+                <h1 class="faq-page">Can I book a pet walking service on a recurring basis?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Yes, you can! We offer flexible scheduling options, including daily, weekly, or custom recurring
+                        pet walking services to fit your needs and your pet's routine.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-four">
+
+                <!-- faq question -->
+                <h1 class="faq-page">What does your pet massage and spa service include?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our pet massage and spa service includes gentle massages to relax and soothe your pet, along with
+                        spa treatments like baths, grooming, and nail trims to keep them looking and feeling their
+                        best.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-five">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How can I enroll my pet in your pet training programs?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Enrolling your pet in our training programs is easy. Just contact our team, and we'll help you
+                        choose the right program for your pet's needs and schedule a training session.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-six">
+
+                <!-- faq question -->
+                <h1 class="faq-page">What are the accommodations like for pet boarding?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our pet boarding facilities provide a comfortable and safe environment for your pet. Each pet has
+                        its own spacious enclosure, regular exercise, and social interaction with our trained staff.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-seven">
+
+                <!-- faq question -->
+                <h1 class="faq-page">Are your pet care professionals certified and trained?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Yes, our pet care professionals are highly trained and certified in their respective fields. We
+                        prioritize the well-being and safety of your pets, and our team is committed to providing the
+                        best care possible.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-eight">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How do you handle emergencies or medical issues for pets in your care?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our staff is trained to recognize and respond to emergencies. In the event of a medical issue, we
+                        have protocols in place to ensure your pet receives prompt attention, and we will contact you
+                        immediately.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-nine">
+
+                <!-- faq question -->
+                <h1 class="faq-page">Can I tour your facilities before booking a service for my pet?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Absolutely! We encourage you to schedule a tour of our facilities to see where your pet will be
+                        staying and meet our team. Just give us a call to arrange a visit.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-ten">
+
+                <!-- faq question -->
+                <h1 class="faq-page">What are your hours of operation for pet services?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our hours of operation vary by service and location. You can find our service hours on our
+                        website, or feel free to contact us for specific details about our operating hours for each
+                        service.</p>
+                </div>
+            </div>
+
+            
+            <section class="contact-section">
+                <hr class="hr-line"> <!-- Add a line after FAQ -->
+            
+                <div class="contact-content" style="background-color: #f2f2f2; padding: 20px; text-align: center;">
+                    <h1 class="faq-heading" style="font-size: 36px;">Didn't find any Solution?</h1> <!-- "Didn't find any Solution?" with the same format as FAQ headings -->
+                    <p style="font-size: 18px;">If you didn't find a solution to your query, we're here to assist you!</p>
+                    <p style="font-size: 18px;">Feel free to reach out to us via live chat or by using the contact form at home page.</p>
+                </div>
+            </section>
+
+        </section>
+    </main>
+        <script>
+            var faq = document.getElementsByClassName("faq-page");
+            var i;
+
+            for (i = 0; i < faq.length; i++) {
+                faq[i].addEventListener("click", function () {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("activee");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var body = this.nextElementSibling;
+                    if (body.style.display === "block") {
+                        body.style.display = "none";
+                    } else {
+                        body.style.display = "block";
+                    }
+                });
+            }
+
+
+            // Function to save the search query to local storage
+            function saveToLocalStorage(query) {
+                localStorage.setItem('searchQuery', query);
+            }
+
+            // Function to get the search query from local storage
+            function getFromLocalStorage() {
+                return localStorage.getItem('searchQuery') || '';
+            }
+
+            // Example: Save the search query when the user performs a search
+            const searchInput = document.querySelector('input[type="text"]');
+            const searchButton = document.querySelector('button[type="submit"]');
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                saveToLocalStorage(query);
+            });
+
+            // Example: Populate the search input with the previous query on page load
+            window.addEventListener('load', function () {
+                const query = getFromLocalStorage();
+                searchInput.value = query;
+            });
+
+            // Function to save the search query to a cookie
+            function saveToCookie(query) {
+                document.cookie = `searchQuery=${encodeURIComponent(query)}`;
+            }
+
+        // Function to get the search query from a cookie
+            function getFromCookie() {
+                const name = 'searchQuery=';
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const cookieArray = decodedCookie.split(';');
+                for (let i = 0; i < cookieArray.length; i++) {
+                    let cookie = cookieArray[i];
+                    while (cookie.charAt(0) === ' ') {
+                        cookie = cookie.substring(1);
+                    }
+                    if (cookie.indexOf(name) === 0) {
+                        return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return '';
+            }
+
+            // Example: Save the search query to a cookie when the user performs a search
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                saveToCookie(query);
+            });
+
+            // Example: Populate the search input with the previous query from the cookie on page load
+            window.addEventListener('load', function () {
+                const query = getFromCookie();
+                searchInput.value = query;
+            });
+
+        
+        
+
+        </script>
+
+
+    <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/65060950b1aaa13b7a773e8d/1hafp8on6';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+    <!-- Footer-->
+    <div id="footer">
+        <div class="container-2">
+            <div class="flex-container">
+                <div class="flex-child">
+                    <p>
+                    <div class="h2 text-left"><strong>Navigation</strong></div>
+                    <a href="service.html">Our Service</a><br>
+                    <a href="helpcenter.html">Help Center</a><br>
+                    </p>
+                </div>
+                <div class="flex-child">
+                    <p>
+    
+                    <div class="h2 text-left"><strong>About</strong></div>
+                    <a href="AboutUs.html">About Us</a><br>
+    
+                    </p>
+                </div>
+                <!-- Social Media Links -->
+                <div class="flex-child">
+                    <p>
+                        <!-- Share Plugin -->
+                        <h6 class="text-center">Share the best pet paradise to your loved ones!</h6>
+                        <div class="share text-center"></div>
+                        <!-- ends Share Plugin -->
+                    </p>
+                </div>
+                
+                <div class="flex-child">
+                    <p style="text-align: justify;">
+                        <a href="index.html"><img class="img-responsive" src="images/icon.png" alt="logo"
+                                width="80vw" height="70vw"></a>
+                        <br>
+                        <a href="tel:0181237654"><i class="phoneNo">018-123 7654</i></a>
+                        <br>
+                        <a href="mailto:qubypetshop@gmail.com"><i class="email"></i>
+                            qubypetshop@gmail.com</a>
+                        <br>
+                        <a
+                            href="https://www.google.com/maps/place/Ipoh+Parade,+105,+Jalan+Sultan+Abdul+Jalil,+31350+Ipoh,+Perak/@4.5951721,101.0896709,3a,75y,26.77h,90t/data=!3m6!1e1!3m4!1srHx7PEQcFG5gCOuN_YC-lw!2e0!7i16384!8i8192!4m7!3m6!1s0x31caec611a9d9c41:0xfe76e16d137449b4!8m2!3d4.5959134!4d101.0900944!10e5!16s%2Fg%2F11hzsky9vv?entry=ttu">
+                            <i> 105, Jalan Sultan Abdul Jalil, 31350 Ipoh, Perak</i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+        <!-- ends Footer-->
+        
+        <script>
+            // Social Media Plugins
+            $(".share").jsSocials({
+                url: "https://qubypet.com",
+                text: "Let's try out QubyPet's pet care service!",
+                showLabel: false,
+                shares: ["twitter", "whatsapp", "facebook"]
+            });
+            // Social Media Plugins
+        </script>
+    </body>
+
+</html>

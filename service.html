@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+        <!-- Basic -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="qubypet, pet, pet care, pet management, animal care, animal management" />
+        <meta name="description" content="QubyPet is a pet care website that provide various services." />
+        <meta name="author" content="qubypet" />
+    
+        <title>Quby Pet</title>
+    
+        <!-- icon of webpage beside webpage's name-->
+        <link rel="icon" sizes="600x600" href="images/icon.png">
+        <!-- icon to touch-->
+        <link rel="apple-touch-icon" sizes="600x600" href="images/icon.png">
+    
+        <!--boostrap, jQuerstyle.y-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js" type="text/javascript"></script>
+
+        <!-- JsSocials CDN -->
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+        <link type="text/css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+        <!-- JsSocials Icon -->
+        <script src="https://kit.fontawesome.com/13ccb33514.js" crossorigin="anonymous"></script>
+        
+        <!--embeded css-->
+        <style>
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bckgrnd1,
+        .bckgrnd2 {
+            position: relative;
+            opacity: 1.0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+        }
+
+        .bckgrnd1 {
+            background-image: url("images/services.png");
+            min-height: 500px;
+        }
+
+        .bckgrnd2 {
+            background-image: url("images/bg2.jpg");
+            min-height: 500px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px 0;
+            height: 500px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .imgg {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 60%;
+        }
+
+        .column .horizontal {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            background: no-repeat center center;
+            background-size: cover;
+            display: block;
+            width: 500px;
+            height: 500px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+        #sub {
+            font-family: 'Archivo Narrow', sans-serif;
+            text-align: center;
+            font-weight: 400;
+            font-size: 42px;
+        }
+
+        .round {
+            border-radius: 100%;
+            width: 250px;
+            height: 200px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .col {
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .buttons {
+            cursor: pointer;
+        }
+
+        .buttons:hover {
+            opacity: 0.5;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+        }
+
+        .overlap {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: hsla(0, 0%, 0%, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .overlap:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .rect {
+            background-color: rgb(200, 222, 252);
+            width: 400px;
+            border: 5px rgb(34, 34, 34);
+            padding: 50px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .rect:hover {
+            opacity: 0.7;
+            background-color: rgb(233, 201, 188);
+        }
+
+        .rect1 {
+            background-color: rgb(252, 248, 200);
+            width: 400px;
+            border: 5px rgb(34, 34, 34);
+            padding: 50px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .rect1:hover {
+            opacity: 0.7;
+            background-color: rgb(247, 203, 242);
+        }
+
+        .imageright {
+            float: right;
+            width: 140px;
+            height: 140px;
+            margin: 0 0 0 15px;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        .converter-container {
+            background-color: rgba(211, 211, 211, 0.538);
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+        }
+
+        .converter {
+            display: flex;
+            gap: 1rem;
+            align-items: right;
+            flex-wrap: wrap;
+        }
+
+        .converter>button {
+            width: 100px;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .column,
+            .imgg,
+            .bckgrnd1,
+            .bckgrnd2 {
+                width: 100%;
+            }
+        }
+
+        .banner {
+            align-content: center;
+            display: none;
+            justify-content: center;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body onload="checkUser()">
+
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="top_container sub_pages">
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/icon.png" alt="pet shop icon">
+                            </a>
+    
+                            <div class="custom_menu-btn ml-auto d-lg-none">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Our Service</a>
+                                <a href="AboutUs.html">About Us</a>
+                                <a href="helpcenter.html">Help Center</a>
+                                <a href="login.html" class="nav-link" id="login1">Login</a>
+                                <a href="login.html" class="nav-link d-none" id="logout1">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-lg-row align-items-center d-lg-block">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="service.html"> Our Service </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AboutUs.html"> About Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="helpcenter.html"> Help Center </a>
+                                </li>
+
+                                <li class="nav-item text-center">
+                                    <a id="login" class="nav-link" href="login.html">
+                                        Login
+                                    </a>
+                                </li>
+        
+                                <li class="nav-item text-center">
+                                    <a id="logout" class="nav-link d-none" href="login.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <!-- Navigation button function -->
+        <script>
+            function openNav() {
+            document.getElementById("myNav").classList.toggle("menu_width")
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+        }
+        </script>
+
+        <div class="bckgrnd1"></div>
+
+        <div style="color: #ffffff;background-color:rgb(0, 0, 0);text-align:center;padding:50px 80px;text-align: justify;">
+            <h3 style="text-align:center; font-family: 'Fjalla One'; font-size:48px;letter-spacing: 0em;
+            "><b>OUR SERVICES</b></h3>
+            <p style="color: white;">We are dedicated to meeting all of your pets' needs and desires, 
+                providing a comprehensive menu of services from initial care to pampering.</p>
+        </div>
+
+
+        <div class="column" style="background-color:rgb(240, 245, 220); padding: 50px;">
+                <h2 style="font-family: 'Fjalla One'; font-weight: bold;">Pet Grooming</h2>
+                <p style="text-align: justify; font-family: Georgia;">Quby Pet offers a diverse range of luxurious treatments designed to make your pet look and feel their absolute best. 
+                    From indulgent baths and meticulous grooming to a full-scale cut and style experience, 
+                    our team of dedicated and professional groomers is here to provide your pet with the pampering they deserve.</p>
+        </div>
+        <div class="column" style="background-color:#fddcf7">
+                <img src="images/pet groom.png" alt="pet groom" class="horizontal"
+                    style="left: 50%; top: 800px;">
+        </div>
+        
+
+        <div class="column" style="background-color:#ffffff; text-align: center;">
+            <img src="images/pet daycare.png" alt="pet daycare" class="imgg">
+        </div>
+        <div class="column" style="background-color:rgb(193, 231, 250); padding: 50px;">
+            <h2 style="font-family: 'Fjalla One'; font-weight: bold;">Pet Day Care</h2>
+                <p style="text-align: justify; font-family: Georgia;">Quby Pet prioritize your dog's safety and well-being. 
+                    From the moment they step into our facility, they enjoy a fully supervised environment. 
+                    Our dedicated staff members promote socialization, playtime, and reinforce essential training and good manners.</p>
+        </div>
+
+
+        <div class="column" style="background-color:rgb(209, 249, 213); padding: 50px;">
+            <h2 style="font-family: 'Fjalla One'; font-weight: bold;">Pet Walking</h2>
+                <p style="text-align: justify; font-family: Georgia;">Quby Pet walking service offers an intimate experience for your furry friend. 
+                    Our small group walks typically consist of just two or three dogs from the same neighborhood. 
+                    By keeping our packs small, we ensure that your dog enjoys a fun and social outing.</p>
+        </div>
+        <div class="column" style="background-color:#def799">
+            <img src="images/pet walking.png" alt="pet walking" class="horizontal"
+                style="left: 50%; top: 1750px;">
+        </div>
+
+        <p></p>
+        <div id="sub">
+            <p></p>
+            <h3><b><i>OTHER SERVICES</i></b></h3>
+        </div>
+        <div class="row">
+            <a class="col buttons" href="#pop">
+                <img src="images/pet massage.png" alt="pet massage" class="round">
+            </a>
+            <a class="col buttons" href="#pop1">
+                <img src="images/pet training.png" alt="pet training" class="round">
+            </a>
+            <a class="col buttons" href="#pop2">
+                <img src="images/pet spa.jpg" alt="pet spa" class="round">
+            </a>
+            <a class="col buttons" href="#pop3">
+                <img src="images/pet boarding.jpg" alt="pet boarding" class="round">
+            </a>
+        </div>
+        <div id="pop" class="overlap">
+            <div id="other" class="popup">
+                <h2>Pet Massage</h2>
+                <a class="close" href="#other">&times;</a>
+                <div class="content">
+                    Pet massage is a soothing and therapeutic practice that helps relax and rejuvenate your pet, promoting their overall well-being and comfort.
+                </div>
+            </div>
+        </div>
+        <div id="pop1" class="overlap">
+            <div id="other" class="popup">
+                <h2>Pet Training</h2>
+                <a class="close" href="#other">&times;</a>
+                <div class="content">
+                    Pet training is the key to a well-behaved and happy companion, where expert guidance and positive reinforcement help pets learn essential skills and manners.
+                </div>
+            </div>
+        </div>
+        <div id="pop2" class="overlap">
+            <div id="other" class="popup">
+                <h2>Pet Spa</h2>
+                <a class="close" href="#other">&times;</a>
+                <div class="content">
+                    Pamper your beloved pet with a relaxing and revitalising pet spa session to keep them happy, healthy, and in good shape.
+                </div>
+            </div>
+        </div>
+        <div id="pop3" class="overlap">
+            <div id="other" class="popup">
+                <h2>Pet Boarding</h2>
+                <a class="close" href="#other">&times;</a>
+                <div class="content">
+                    Enjoy peace of mind while you're away, knowing your beloved pet is secure, comfortable, and receiving excellent care at our pet boarding facility.
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+        <div id="sub">
+            <p></p>
+            <h3><b><i>RECOMMENDED PRODUCTS</i></b></h3>
+            <p style="font-size: 14px;">Click on the boxes to view description</p>
+        </div>
+        <div class="row">
+            <a class="rect" href="#sp">
+                <img src="images/pet food.jpg" alt="pet food" class="imageright">
+                <b>Pet Food</b>
+                <p></p>
+                <p></p>
+                <p>RM25.00</p>
+            </a>
+            <a class="rect" href="#sp1">
+                <img src="images/pet bed.jpg" alt="pet bed" class="imageright">
+                <b>Pet Bed</b>
+                <p></p>
+                <p></p>
+                <p>RM20.00</p>
+            </a>
+            <a class="rect" href="#sp2">
+                <img src="images/pet shampoo.jpg" alt="pet shampoo" class="imageright">
+                <b>Pet Shampoo</b>
+                <p></p>
+                <p></p>
+                <p>RM18.00</p>
+            </a>
+            <a class="rect" href="#sp3">
+                <img src="images/pet nailclip.jpg" alt="pet nailclip" class="imageright">
+                <b>Pet Nailclip</b>
+                <p></p>
+                <p></p>
+                <p>RM10.00</p>
+            </a>
+            <a class="rect" href="#sp4">
+                <img src="images/pet toys.jpg" alt="pet toys" class="imageright">
+                <b>Pet Toys</b>
+                <p></p>
+                <p></p>
+                <p>RM5.00</p>
+            </a>
+            <a class="rect" href="#sp5">
+                <img src="images/pet supplement.jpg" alt="pet supplement" class="imageright">
+                <b>Pet Supplement</b>
+                <p></p>
+                <p></p>
+                <p>RM50.00</p>
+            </a>
+        </div>
+        <div id="sp" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Food</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    High-quality pet food ensures your pet enjoys a nutritious and delicious meal that supports their health and vitality.<br>
+                </div>
+            </div>
+        </div>
+        <div id="sp1" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Bed</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    Give your pet the gift of a high-quality bed, providing them with the ultimate in comfort and restful sleep.<br>
+                </div>
+            </div>
+        </div>
+        <div id="sp2" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Shampoo</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    Elevate your pet's grooming routine with high-quality pet shampoo, designed to keep their fur clean, healthy, and irresistibly soft.<br>
+                </div>
+            </div>
+        </div>
+        <div id="sp3" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Nailclip</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    Experience peace of mind with high-quality pet nail clippers, ensuring a safe and comfortable nail trimming experience for your beloved pet.<br>
+                </div>
+            </div>
+        </div>
+        <div id="sp4" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Toys</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    Engage your pet's playful spirit with high-quality toys that stimulate their mind and provide hours of entertainment and joy.<br>
+                </div>
+            </div>
+        </div>
+        <div id="sp5" class="overlap">
+            <div id="return" class="popup">
+                <h2>Pet Supplement</h2>
+                <a class="close" href="#return">&times;</a>
+                <div class="content">
+                    Elevate your pet's well-being with high-quality supplements, tailored to their specific needs, for a healthier and happier life.<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="bckgrnd2">
+        </div>
+        <div style="position:relative;">
+        </div>
+
+        <div id="sub">
+            <h3><b><i>BASIC PRICE FOR SERVICES</i></b></h3>
+            <p style="font-size: 14px;">Click on the boxes to select service type</p>
+        </div>
+        </div>
+
+        <div id="price" class="row">
+            <a class="rect1" onclick="selectService('Grooming')">
+                <img src="images/groom.jpg" alt="groom" class="imageright">
+                <b>Pet Grooming</b>
+                <p></p>
+                <p></p>
+                <p>RM60.00</p>
+            </a>
+            <a class="rect1" onclick="selectService('DayCare')">
+                <img src="images/daycare.jpg" alt="daycare" class="imageright">
+                <b>Pet Day Care</b>
+                <p></p>
+                <p></p>
+                <p>RM70.00</p>
+            </a>
+            <a class="rect1" onclick="selectService('Walking')">
+                <img src="images/walk.jpg" alt="walk" class="imageright">
+                <b>Pet Walking</b>
+                <p></p>
+                <p></p>
+                <p>RM30.00</p>
+            </a>
+            <a class="rect1" onclick="selectService('MassageSpa')">
+                <img src="images/mspa.jpg" alt="mspa" class="imageright">
+                <b>Pet Massage & Spa</b>
+                <p></p>
+                <p></p>
+                <p>RM80.00</p>
+            </a>
+            <a class="rect1" onclick="selectService('Training')">
+                <img src="images/training.jpg" alt="train" class="imageright">
+                <b>Pet Training</b>
+                <p></p>
+                <p></p>
+                <p>RM50.00</p>
+            </a>
+            <a class="rect1" onclick="selectService('Boarding')">
+                <img src="images/boarding.jpg" alt="boarding" class="imageright">
+                <b>Pet Boarding</b>
+                <p></p>
+                <p></p>
+                <p>RM99.00</p>
+            </a>
+        </div>
+
+    <!--Booking Form-->
+    <div class="container mt-5">
+        <h2 style="font-family: Georgia;"><b><i>Pet Service Booking</i></b></h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="serviceType">Service Type</label>
+                <select class="form-control" id="serviceType" required>
+                    <option value="">Select Service</option>
+                    <option value="Grooming">Pet Grooming</option>
+                    <option value="DayCare">Pet Day Care</option>
+                    <option value="Walking">Pet Walking</option>
+                    <option value="MassageSpa">Pet Massage & Spa</option>
+                    <option value="Training">Pet Training</option>
+                    <option value="Boarding">Pet Boarding</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="names">Name</label>
+                <input type="text" class="form-control" id="names" required>
+            </div>
+            <div class="form-group">
+                <label>How often do you need this service?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceFrequency" id="once" value="Once" required>
+                    <label class="form-check-label" for="once">Once</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceFrequency" id="weekly" value="Weekly" required>
+                    <label class="form-check-label" for="weekly">Weekly</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceFrequency" id="monthly" value="Monthly" required>
+                    <label class="form-check-label" for="monthly">Monthly</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" class="form-control" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" class="form-control" id="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="dogSize">Pet Size</label>
+                <select class="form-control" id="dogSize" required>
+                    <option value="">Select Size</option>
+                    <option value="Small (0-15 lbs)">Small (0-15 lbs)</option>
+                    <option value="Medium (16-40 lbs)">Medium (16-40 lbs)</option>
+                    <option value="Large (41-100 lbs)">Large (41-100 lbs)</option>
+                    <option value="Giant (100+ lbs)">Giant (100+ lbs)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <br>
+
+    <script>
+        // Function to select a service based on the image clicked
+        function selectService(service) {
+        const serviceSelect = document.getElementById("serviceType");
+        const serviceOptions = serviceSelect.options;
+
+        for (let i = 0; i < serviceOptions.length; i++) {
+            if (serviceOptions[i].value === service) {
+                serviceSelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+        // Handle form submission
+        document.getElementById("bookingForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            // Get form values
+            const serviceType = document.getElementById("serviceType").value;
+            const names = document.getElementById("names").value;
+            const serviceFrequency = document.querySelector('input[name="serviceFrequency"]:checked').value;
+            const startDate = document.getElementById("startDate").value;
+    
+            // Calculate the end date based on service frequency
+            let endDate;
+            if (serviceFrequency === "Once") {
+                endDate = startDate; // Set end date to start date for "Once"
+            } else {
+                endDate = document.getElementById("endDate").value;
+            }
+    
+            const dogSize = document.getElementById("dogSize").value;
+    
+            // Create a booking object
+            const booking = {
+                serviceType,
+                names,
+                serviceFrequency,
+                startDate,
+                endDate,
+                dogSize
+            };
+    
+            // Store the booking object in session storage
+            sessionStorage.setItem("booking", JSON.stringify(booking));
+    
+            window.location.href = "confirmation.html";
+
+            // Store the booking object in cookies
+            document.cookie = "booking=" + JSON.stringify(booking) + "; path=/";
+
+            window.location.href = "confirmation.html";
+
+            // Store the booking object in local storage
+            localStorage.setItem("booking", JSON.stringify(booking));
+
+            window.location.href = "confirmation.html";
+        });
+    
+        // Listen for changes in service frequency selection
+        document.querySelectorAll('input[name="serviceFrequency"]').forEach(function (radio) {
+            radio.addEventListener("change", function () {
+                const serviceFrequency = document.querySelector('input[name="serviceFrequency"]:checked').value;
+                const endDateField = document.getElementById("endDate");
+    
+                if (serviceFrequency === "Once") {
+                    // Set end date to start date for "Once"
+                    endDateField.value = document.getElementById("startDate").value;
+                    endDateField.disabled = true; // Disable end date field
+                } else {
+                    endDateField.disabled = false; // Enable end date field for other frequencies
+                }
+            });
+        });
+    </script>
+    <!--end of booking form-->
+    </div>
+    <!-- Social Media Links -->
+    <div class="flex-child">
+        <p>
+            <!-- Share Plugin -->
+            <h6 class="text-center">Share the best pet paradise to your loved ones!</h6>
+            <div class="share text-center"></div>
+            <!-- ends Share Plugin -->
+        </p>
+    </div>
+
+
+
+    <!-- Footer - Available on every pages -->
+    <div id="footer">
+        <div class="container-2">
+            <div class="flex-container">
+                <!-- currency converter api -->
+                <div class="converter-container">
+                    <h2>Currency Converter</h2>
+                    <p style="text-align: left;">Not Within Malaysia? Try your currency below!</p>
+                        <div class="converter">
+                            <span>MYR</span>
+                                <input type="number" name="myr-amount" id="myr-amount">
+                                <button id="converter-button">Convert</button>
+                                <select id="currency-change">
+                                    <option value="USD">USD</option>
+                                    <option value="SGD">SGD</option>
+                                </select>
+                            <span id="final-amount"></span>
+                        </div>
+                </div>
+                
+                <div class="flex-child">
+                    <p>
+                    <div class="h2 text-left"><strong>Navigation</strong></div>
+                    <a href="service.html">Our Service</a><br>
+                    <a href="helpcenter.html">Help Center</a><br>
+                    </p>
+                </div>
+                <div class="flex-child">
+                    <p>
+
+                    <div class="h2 text-left"><strong>About</strong></div>
+                    <a href="AboutUs.html">About Us</a><br>
+
+                    </p>
+                </div>
+
+                
+                <div class="flex-child">
+                    <p style="text-align: justify;">
+                        <a href="index.html"><img class="img-responsive" src="images/icon.png" alt="logo"
+                                width="80vw" height="70vw"></a>
+                        <br>
+                        <a href="tel:0181237654"><i class="phoneNo">018-123 7654</i></a>
+                        <br>
+                        <a href="mailto:qubypetshop@gmail.com"><i class="email"></i>
+                            qubypetshop@gmail.com</a>
+                        <br>
+                        <a
+                            href="https://www.google.com/maps/place/Ipoh+Parade,+105,+Jalan+Sultan+Abdul+Jalil,+31350+Ipoh,+Perak/@4.5951721,101.0896709,3a,75y,26.77h,90t/data=!3m6!1e1!3m4!1srHx7PEQcFG5gCOuN_YC-lw!2e0!7i16384!8i8192!4m7!3m6!1s0x31caec611a9d9c41:0xfe76e16d137449b4!8m2!3d4.5959134!4d101.0900944!10e5!16s%2Fg%2F11hzsky9vv?entry=ttu">
+                            <i> 105, Jalan Sultan Abdul Jalil, 31350 Ipoh, Perak</i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ends Footer-->
+    
+    <script>
+            // Social Media Plugins
+            $(".share").jsSocials({
+                url: "https://qubypet.com",
+                text: "Let's try out QubyPet's pet care service!",
+                showLabel: false,
+                shares: ["twitter", "whatsapp", "facebook"]
+            });
+            // Social Media Plugins
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var $horizontal = $('.horizontal');
+            var startPosition = $horizontal.position().left;
+            var speed = 20;
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                var newPos = (st * (speed / 100)) + startPosition;
+                $horizontal.css({
+                    'left': newPos
+                });
+            });
+
+        });
+    </script>
+
+    <!-- currency converter restful api -->
+    <script>
+        $(document).ready(function () {
+            $("#converter-button").click(function () {
+                $.get("https://v6.exchangerate-api.com/v6/502e13f23e7de148321087cb/latest/MYR", function (data, status) {
+                    //getting value from input with id=myr-amount and put into myr_amount variable.
+                    var myr_amount = parseFloat($("#myr-amount").val());
+                    var chosen_currency = $("#currency-change").val();
+                    //store myr to usd conversion rate into var myr_to_usd_rate varialbe
+                    var conversion_rates = data.conversion_rates[chosen_currency];
+                    //convert myr to usd
+                    var final_amount = myr_amount * conversion_rates;
+                    $("#final-amount").text(chosen_currency + final_amount.toFixed(2));
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>

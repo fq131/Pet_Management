@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About us</title>
+
+    <!-- icon of webpage beside webpage's name-->
+    <link rel="icon" sizes="600x600" href="images/icon.png">
+    <!-- icon to touch-->
+    <link rel="apple-touch-icon" sizes="600x600" href="images/icon.png">
+
+    <!--boostrap, jQuerstyle.y-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!-- JsSocials CDN -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+    <!-- JsSocials Icon -->
+    <script src="https://kit.fontawesome.com/13ccb33514.js" crossorigin="anonymous"></script>
+
+    <style>
+        
+.section-title {
+    font-size: 50px; 
+    font-weight: bold;
+    color: #333; 
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+/* "About Us" */
+.about-us-container {
+    background-color: #f9f9f9; 
+    padding: 40px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* paragraph */
+.welcome-container p {
+    font-size: 20px; 
+    line-height: 1.6; 
+    color: #666; 
+    float: right;
+    width: 100%;
+}
+
+/* map */
+.map-container {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.map-container iframe {
+    width: 100%; 
+    height: 350px; 
+    border: none; 
+}
+
+.welcome-heading-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-heading {
+    font-size: 40px; 
+    font-weight: bold; 
+    text-align: center;
+}
+
+.highlight-text {
+    color: #ff5733; 
+    font-size: 40px; 
+    font-style: italic; 
+    text-decoration: underline; 
+}
+
+ .welcome-container { 
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    text-align: left;
+ }
+
+.location {
+font-weight: bold;
+}
+
+.why-choose-us {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    padding: 40px 0; 
+    text-align: center; 
+}
+.why-choose-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+ .why-choose-us-content {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+ .why-choose-us-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px; 
+}
+
+/* 改变 "Us?" 的颜色 */
+.why-choose-us-heading span {
+    color: red;
+}
+
+.why-choose-us-cell {
+ max-width: 330px;
+ border: 7px solid #060606;
+padding: 20px;
+ vertical-align: top;
+ width: 100%;
+ height: 100%;
+ }
+        
+.why-choose-us-item {
+    background-color: white;
+    font-size: 18px;
+    margin: 10px 5px;
+    box-sizing: border-box;
+    padding: 10px; 
+    max-width: 48%; 
+    display: inline-block; 
+}
+
+.row {
+    margin-bottom: 20px;
+}
+           
+.logo {
+    max-width: 100px; 
+    display: block; 
+    margin: 0 auto 10px; 
+ }
+
+/* member */
+.column {
+  float: left;
+  width: 25%; 
+  margin-bottom: 16px;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 100%; 
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 16px; 
+  }
+}
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px; 
+  margin-bottom: 20px; 
+}
+/* Some left and right padding inside the container */
+.containerz {
+  padding: 2px; 
+}
+
+/* Clear floats */
+.containerz::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+</style>
+</head>
+    <body onload="checkUser()">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="top_container sub_pages">
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/icon.png" alt="pet shop icon">
+                            </a>
+    
+                            <div class="custom_menu-btn ml-auto d-lg-none">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Our Service</a>
+                                <a href="AboutUs.html">About Us</a>
+                                <a href="helpcenter.html">Help Center</a>
+                                <a href="login.html" class="nav-link" id="login1">Login</a>
+                                <a href="login.html" class="nav-link d-none" id="logout1">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-lg-row align-items-center d-lg-block">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="service.html"> Our Service </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AboutUs.html"> About Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="helpcenter.html"> Help Center </a>
+                                </li>
+
+                                <li class="nav-item text-center">
+                                    <a id="login" class="nav-link" href="login.html">
+                                        Login
+                                    </a>
+                                </li>
+        
+                                <li class="nav-item text-center">
+                                    <a id="logout" class="nav-link d-none" href="login.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+        <!-- Navigation button function -->
+        <script>
+            function openNav() {
+            document.getElementById("myNav").classList.toggle("menu_width")
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+        }
+        </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newsletterForm = document.getElementById("newsletter-form");
+            const emailInput = document.getElementById("email");
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
+
+            // Function to get a cookie by name
+            function getCookie(name) {
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const cookieArray = decodedCookie.split(';');
+                for (let i = 0; i < cookieArray.length; i++) {
+                    let cookie = cookieArray[i];
+                    while (cookie.charAt(0) === ' ') {
+                        cookie = cookie.substring(1);
+                    }
+                    if (cookie.indexOf(name + "=") === 0) {
+                        return cookie.substring(name.length + 1, cookie.length);
+                    }
+                }
+                return "";
+            }
+
+            // Function to set email in local storage
+            function setLocalStorageEmail(email) {
+                localStorage.setItem("newsletterEmail", email);
+            }
+
+            // Function to get email from local storage
+            function getLocalStorageEmail() {
+                return localStorage.getItem("newsletterEmail") || "";
+            }
+
+            // Check if the email cookie exists and populate the input field
+            const storedEmail = getCookie("newsletterEmail");
+            if (storedEmail !== "") {
+                emailInput.value = storedEmail;
+            } else {
+                // Check if email exists in local storage
+                const localEmail = getLocalStorageEmail();
+                if (localEmail !== "") {
+                    emailInput.value = localEmail;
+                }
+            }
+
+            newsletterForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const email = emailInput.value;
+
+                // Store the email in a cookie that expires in 30 days
+                setCookie("newsletterEmail", email, 30);
+
+                // Store the email in local storage
+                setLocalStorageEmail(email);
+
+                // Optionally, you can provide feedback to the user
+                alert("Thank you for subscribing!");
+
+                // Clear the input field
+                emailInput.value = "";
+            });
+        });
+    </script>
+
+    <div class="welcome-heading-container">
+        <p class="welcome-heading">Welcome to <span class="highlight-text">Quby Pet</span> - Your Trusted Pet Management Partner.</p>
+    </div>
+    <div class="about-us-container">
+        <h2 class="section-title">About Us</h2>
+        <div class="welcome-container">
+            <p>
+                In today's society, pets are no longer just animals; they have become cherished family members. Quby Pet, founded in 2022 by passionate animal lovers, is dedicated to improving the lives of pets and their owners.
+            </p>
+    
+            <p>
+                We not only provide pet services, including pet grooming, pet day care, pet walking, pet massage and spa, pet training and pet boarding, but also sell pet products.Our experienced team is ready to care for your pet seven days a week in <span class="location">Ipoh</span>. You can find us conveniently located in <span class="location">Ipoh Parade</span>.
+            </p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9823894351707!2d101.08749707482963!3d4.5971773425466305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caed383c44137b%3A0x210c32fd8dff9681!2sIpoh%20Parade!5e0!3m2!1sen!2smy!4v1694877052118!5m2!1sen!2smy" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="why-choose-us-container">
+        <div class="why-choose-us">
+            <p class="why-choose-us-heading">Why Choose <span>Us?</span></p>
+
+            <div class="row">
+                <div class="why-choose-us-item">
+                    <table>
+                        <tr>
+                            <td class="why-choose-us-cell">
+                                <img src="images/huhuman.png" alt="Logo 1" class="logo">
+                                <strong>Experienced Professionals:</strong><br>
+                                Our team, comprised of experienced veterinarians, skilled pet groomers, and dedicated pet care specialists, ensures your pet receives the highest standard of care and attention.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+      
+                <div class="why-choose-us-item">
+                    <table>
+                        <tr>
+                            <td class="why-choose-us-cell">
+                                <img src="images/appoinment1.png" alt="Logo 1" class="logo">
+                                <strong>Convenient Appointments:</strong><br>
+                                Our user-friendly online booking system simplifies scheduling pet grooming or veterinary check-up appointments, allowing you to schedule your pet's appointments at your convenience.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="why-choose-us-item">
+                    <table>
+                        <tr>
+                            <td class="why-choose-us-cell">
+                                <img src="images/homehome.png" alt="Logo 1" class="logo">
+                                <strong>Safe and Comfortable Environment:</strong><br>
+                                Our pet boarding facility offers a safe, clean, and comfortable home for your pets, providing love, playtime, and attention during their stay.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+       
+                <div class="why-choose-us-item">
+                    <table>
+                        <tr>
+                            <td class="why-choose-us-cell">
+                                <img src="images/care.png" alt="Logo 1" class="logo">
+                                <strong>Personalized Care:</strong><br>
+                                We cater to your pet's unique needs by tailoring our services, including special diets, medication, and grooming preferences, to ensure a personalized experience.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+        </div>
+        </div>
+    </div>   
+
+    <div class="team-heading">
+        <h1 style="text-align: center; font-weight: bold; font-size: 70px;">Our Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="images/member1.jpg" alt="Kenny Saw Wei Wen" style="width:100%">
+            <div class="container">
+              <h2>Kenny Saw Wei Wen</h2>
+              <p class="title">Quby Pet CEO &amp; Founder</p>
+              <p>Kenny Saw Wei Wen is the young founder and CEO of Quby Pet. He has led the company to become a trusted pet management partner, with a deep passion for animals and a wealth of knowledge about pets.</p>
+              <p>KennySaw@qubypet.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="images/member2.jpg" alt="Goh Fang Qing" style="width:100%">
+            <div class="container">
+              <h2>Goh Fang Qing</h2>
+              <p class="title">Pet Groomer</p>
+              <p>Goh Fang Qing a professional pet groomer with 4 years' experience, providing first-class care, fashionable hairstyles and comfortable bathing for pets, and showing her professional skills in every appointment.</p>
+              <p>FangQin@qubypet.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="images/member3.jpg" alt="Wong Zhi Xuan" style="width:100%">
+            <div class="container">
+              <h2>Wong Zhi Xuan</h2>
+              <p class="title">Pet Care Specialist</p>
+              <p>"Wong Zhi Xuan, our Pet Care Specialist with 3 years' experience, ensures the well-being of all pets by understanding their behavior, meeting their physical and emotional needs, and creating a safe environment.</p>
+              <p>ZhiXuan@qubypet.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <img src="images/member4.jpg" alt="Lee Zui Pin" style="width:100%">
+              <div class="container">
+                <h2>Lee Zui Pin</h2>
+                <p class="title">Pet Trainer</p>
+                <p>"Our professional pet trainer, Lee Zui Pin, has five years of professional experience and is committed to providing efficient behavior training services for your pet. Train your pet through professional knowledge.</p>
+                <p>ZuiPin@qubypet.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+    </div>
+      <form id="newsletter-form">
+        <label for="email">Subscribe to our newsletter:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+
+    <!-- Footer-->
+ <div id="footer">
+    <div class="container-2">
+        <div class="flex-container">
+            <div class="flex-child">
+                <p>
+                <div class="h2 text-left"><strong>Navigation</strong></div>
+                <a href="service.html">Our Service</a><br>
+                <a href="helpcenter.html">Help Center</a><br>
+                </p>
+            </div>
+            <div class="flex-child">
+                <p>
+
+                <div class="h2 text-left"><strong>About</strong></div>
+                <a href="AboutUs.html">About Us</a><br>
+
+                </p>
+            </div>
+            <!-- Social Media Links -->
+            <div class="flex-child">
+                <p>
+                    <!-- Share Plugin -->
+                    <h6 class="text-center">Share the best pet paradise to your loved ones!</h6>
+                    <div class="share text-center"></div>
+                    <!-- ends Share Plugin -->
+                </p>
+            </div>
+            
+            <div class="flex-child">
+                <p style="text-align: justify;">
+                    <a href="index.html"><img class="img-responsive" src="images/icon.png" alt="logo"
+                            width="80vw" height="70vw"></a>
+                    <br>
+                    <a href="tel:0181237654"><i class="phoneNo">018-123 7654</i></a>
+                    <br>
+                    <a href="mailto:qubypetshop@gmail.com"><i class="email"></i>
+                        qubypetshop@gmail.com</a>
+                    <br>
+                    <a
+                        href="https://www.google.com/maps/place/Ipoh+Parade,+105,+Jalan+Sultan+Abdul+Jalil,+31350+Ipoh,+Perak/@4.5951721,101.0896709,3a,75y,26.77h,90t/data=!3m6!1e1!3m4!1srHx7PEQcFG5gCOuN_YC-lw!2e0!7i16384!8i8192!4m7!3m6!1s0x31caec611a9d9c41:0xfe76e16d137449b4!8m2!3d4.5959134!4d101.0900944!10e5!16s%2Fg%2F11hzsky9vv?entry=ttu">
+                        <i> 105, Jalan Sultan Abdul Jalil, 31350 Ipoh, Perak</i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+    <!-- ends Footer-->
+    
+    <script>
+        // Social Media Plugins
+        $(".share").jsSocials({
+            url: "https://qubypet.com",
+            text: "Let's try out QubyPet's pet care service!",
+            showLabel: false,
+            shares: ["twitter", "whatsapp", "facebook"]
+        });
+        // Social Media Plugins
+    </script>
+</body>
+</html>

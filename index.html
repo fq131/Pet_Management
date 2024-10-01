@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Basic -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="qubypet, pet, pet care, pet management, animal care, animal management" />
+    <meta name="description" content="QubyPet is a pet care website that provide various services." />
+    <meta name="author" content="qubypet" />
+
+    <title>Quby Pet</title>
+
+    <!-- icon of webpage beside webpage's name-->
+    <link rel="icon" sizes="600x600" href="images/icon.png">
+    <!-- icon to touch-->
+    <link rel="apple-touch-icon" sizes="600x600" href="images/icon.png">
+
+    <!--boostrap, jQuerstyle.y-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!-- JsSocials CDN -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+    <!-- JsSocials Icon -->
+    <script src="https://kit.fontawesome.com/13ccb33514.js" crossorigin="anonymous"></script>
+    
+    <!-- Embedded CSS -->
+    <style>
+
+        /* Containers */
+        .cont-1 {
+            background: url(images/bg.jpg) center center / cover no-repeat fixed;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -o-background-size: contain;
+            background-size: auto;
+            padding-top: 10px;
+        }
+
+        .cont-2 {
+            padding-top: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            color: black;
+            flex-wrap: wrap;
+            font-family:'Times New Roman', Times, serif;
+            margin-top: 20px;
+        }
+
+        button.link:hover {
+            transform: scale(1.1);
+            background-color:rgb(225, 190, 224, 0.5);
+        }
+
+        .a{
+            font-size-adjust: auto;
+        }
+
+        .k{
+            font-family: Arial, Helvetica, sans-serif;
+            color: 	rgb(83, 80, 80);
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .container-fluid.no-padding {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .layout_padding {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .animal_section {
+            background-image: url(images/service.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            margin: 0;
+            padding: 100px 0;
+            display: flex;
+            justify-content: space-between; 
+            justify-content: center;
+            align-items: center;  
+        }
+
+        .acontainer {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .animal_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-circle {
+            width: 250px; 
+            height: 250px; 
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .service-circle img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .service-text {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center; 
+            margin-top: 0; 
+            margin-bottom: 20px;
+        }
+
+        .service-text:hover {
+            color: rgb(22, 57, 197); 
+            cursor: pointer;
+        }
+
+        /* Customer feedback */
+
+        .client_section {
+            background-image: url(images/whitebg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-attachment: fixed;
+            height: auto;
+            position: relative;
+        }
+
+        .client_section::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5); 
+            pointer-events: none;
+        }
+
+        .client_section .container {
+            text-align: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .img-box {
+            flex: auto;
+        }
+
+        .img-box img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .detail-box {
+            flex-grow: 1;
+            margin-left: 20px;
+            margin-bottom: auto;
+            margin-top: auto;
+        }
+
+        .carousel_btn-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            background-color: transparent; 
+            width: auto;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .carousel_btn-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            position: relative; 
+            background-color: #f7eff7;
+            width: 45px;
+            height: 45px;
+            display: inline-block; 
+            margin: 0 3px;
+            border-radius: 50%;
+            line-height: 45px;
+            color: rgb(0, 0, 0); 
+            vertical-align: middle;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            opacity: 0.5;
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: #a6a4a6;
+        }
+
+        .carousel-control-prev::before {
+            content: '\276E'; 
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .carousel-control-next::before {
+            content: '\276F'; 
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .carousel-control-prev:focus, .carousel-control-next:focus {
+            outline: none; 
+            box-shadow: none; 
+        }
+
+        /* Contact */
+        .contact_section {
+            position: relative;
+        }
+
+        .contact_section .form_container {
+            padding: 0 35px;
+        }
+
+        .contact_section form {
+            margin-top: 45px;
+        }
+
+        .contact_section input {
+            width: 100%;
+            border: none;
+            height: 50px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            background-color: #ebebeb;
+            outline: none;
+            color: #101010;
+        }
+
+        .contact_section input.message-box {
+            height: 120px;
+        }
+
+        .contact_section input.btn{
+            display: inline-block;
+            background-color: #aca4ab;
+            color: #ffffff;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            border: 1px solid #514b50;
+            border-radius: 0;
+            color: #000000;
+            margin-top: 10px;
+        }
+
+        .contact_section input.btn:hover {
+            background-color: transparent;
+            color: #837c82;
+        }   
+    </style>
+</head>
+
+<body onload="checkUser()">
+
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="top_container sub_pages">
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/icon.png" alt="pet shop icon">
+                            </a>
+    
+                            <div class="custom_menu-btn ml-auto d-lg-none">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Our Service</a>
+                                <a href="AboutUs.html">About Us</a>
+                                <a href="helpcenter.html">Help Center</a>
+                                <a href="login.html" class="nav-link" id="login1">Login</a>
+                                <a href="login.html" class="nav-link d-none" id="logout1">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-lg-row align-items-center d-lg-block">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="service.html"> Our Service </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AboutUs.html"> About Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="helpcenter.html"> Help Center </a>
+                                </li>
+
+                                <li class="nav-item text-center">
+                                    <a id="login" class="nav-link" href="login.html">
+                                        Login
+                                    </a>
+                                </li>
+        
+                                <li class="nav-item text-center">
+                                    <a id="logout" class="nav-link d-none" href="login.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <!-- Navigation button function -->
+        <script>
+            function openNav() {
+            document.getElementById("myNav").classList.toggle("menu_width")
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+        }
+        </script>
+
+        <div class="cont-2">
+
+            
+            <div class="cont-1 justify-content">
+                <h1 class="h1 pt-3 pb-5">Welcome to Quby Pet</h1>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center align-items-center">
+                        <img src="images/cutedog.png" alt="cutedogs" class="img-fluid">
+                    </div>
+                
+                    <div class="col-12 col-md-6 text-center align-items-center">
+                        <div class="d-flex flex-column justify-content-center h-100 text-center align-items-center">
+                            <p style="text-align: right; text-align:justify;">
+                               Quby Pet is a pet shop that provide various services like pet boarding, grooming and more! 
+                               All of our employee are expertise and are ready to serve you also we are opened 7 days a week at Ipoh Parade.
+                            </p>
+                
+                            <div class="d-flex justify-content-center">
+                                <button class="btn link">
+                                    <a href="AboutUs.html">Find out more&nbsp;
+                                        <img src="images/arrow.png" width="30" height="30" alt="arrowsign">
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    
+            </div>
+            
+            
+        </div>
+    </div>
+
+        <!-- Service -->
+        <!--grooming, walking, day care -->
+        <div class="k">Main Services</div>
+        <div class="container-fluid no-padding">
+            <section class="animal_section layout_padding">
+                <div class="acontainer">
+                    <div class="animal_container">
+                        <div class="justify-content-center">
+                            <div class="service-circle">
+                                <img src="images/grooming.jpg" alt="grooming">
+                            </div>
+                            <div class="service-text" id="groom">
+                                Grooming
+                            </div>
+                        </div>
+                        <div class="justify-content-center">
+                            <div class="service-circle">
+                                <img src="images/walking.jpeg" alt="walking">
+                            </div>
+                            <div class="service-text" id="walk">
+                                Walking
+                            </div>
+                        </div>
+                        <div class="justify-content-center">
+                            <div class="service-circle">
+                                <img src="images/day care.png" alt="day care">
+                            </div>
+                            <div class="service-text" id="day-care">
+                                Day Care
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            document.getElementById("groom").addEventListener("click", function() {
+            window.location.href = "service.html";});
+            
+            document.getElementById("walk").addEventListener("click", function() {
+            window.location.href = "service.html";});
+
+            document.getElementById("day-care").addEventListener("click", function() {
+            window.location.href = "service.html";});
+        </script>
+
+        <!-- Customer's feedback -->
+        <div class="cont-2">
+            <h2 class="h2">Customers feedback</h2>
+            <section class="client_section layout_padding">
+                <div class="container">
+                    
+            
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+            
+                            <div class="carousel-item active">
+                                <div class="box">
+                                    <div class="img-box">
+                                        <img src="images/feedback1.jpg" alt="Feedback Image 1">
+                                    </div>
+                                    <div class="detail-box">
+                                        <p>"The grooming service of Quby Pet is on top notch!
+                                            Love it, definitely will come again"</p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="carousel-item">
+                                <div class="box">
+                                    <div class="img-box">
+                                        <img src="images/feedback2.jpg" alt="Feedback Image 2">
+                                    </div>
+                                    <div class="detail-box">
+                                        <p>"Quby Pet is the place where you can leave your beloved pet for daycare. 
+                                            They really took good care of my baby!!!"</p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="carousel-item">
+                                <div class="box">
+                                    <div class="img-box">
+                                        <img src="images/feedback3.jpeg" alt="Feedback Image 3">
+                                    </div>
+                                    <div class="detail-box">
+                                        <p>"I couldn't be happier with the pet walking service! The walker was always punctual, and my dog absolutely adores them"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="carousel_btn-box">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+        </div>
+
+        <!-- Contact Us-->
+        <div class="cont-2">
+            <div class="h2">Contact Us</div>
+
+            <p class="text-center; text-align">
+                Any questions? Feel free to reach out to us! We're here to assist you in any way we can. Whether you have inquiries about our services or simply want to chat about your pet's specific needs,
+                our friendly and knowledgeable team is just a message away
+            </p>
+
+        <div class="contact_section form_container justify justify-content-center align-items-center row w-100">
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-6">
+                    <div class="contact_section form">
+                    <form id = "contact-form" name="contact-form" autocomplete="off">
+                        <div class="row">
+                            <div class="col-12">
+                                    <label for="name" class="">Full Name:</label>
+                                    <input type="text" id="name" name="name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="email" class="">Email Address:</label>
+                                <input type="text" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                    <label for="subject" class="">Phone number:</label>
+                                    <input type="text" id="phoneNo" name="phoneNo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="message-box">
+                                    <label for="message">Message:</label>
+                                    <textarea type="text" id="message" name="message" rows="4"
+                                        class="form-control md-textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="contact_section">
+                                    <input class="btn" type="submit" id="submit" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center"> 
+                    <div class="news-section-wrapper w-100">
+                        <h3>News Headlines</h3>
+                        <label for="country-code">Please key in country code:</label>
+                        <input type="text" id="country-code" placeholder="e.g MY, SG, US">
+                        <button id="fetch-news">Fetch News</button>
+                        <div id="news-container"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <script>
+            $(document).ready(function() {
+            $("#contact-form").on("submit", function(event) {
+
+                event.preventDefault();
+
+                if (!this.checkValidity()) {
+                    return; 
+                }
+
+                else{
+                    alert("Submit Successfully!");
+                }
+                
+                $("#name").val("");
+                $("#email").val("");
+                $("#phoneNo").val("");
+                $("#message").val("");
+            });
+        });
+    </script>
+
+    <!--News Headlines restful API-->
+    <script>
+        $(document).ready(function () {
+            const apiKey = '3fa485a323284e0db9534e2b2de74336';
+            const newsEndpoint = 'https://newsapi.org/v2/top-headlines';
+
+        $('#fetch-news').click(function () {
+            const userCountry = $('#country-code').val().toUpperCase();
+
+            if (!userCountry) {
+                alert('Please enter a country code!');
+                return;
+            }
+
+            $.ajax({
+                url: newsEndpoint,
+                type: 'GET',
+                data: {
+                    apiKey: apiKey,
+                    country: userCountry,
+                    pageSize: 2
+                },
+                dataType: 'json',
+                success: function (data) {
+                    displayNews(data.articles);
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+        function displayNews(articles) {
+            const newsContainer = $('#news-container');
+            newsContainer.empty();
+
+            if (articles.length === 0) {
+                newsContainer.append('<p>No news available.</p>');
+            } 
+            else {
+                articles.forEach(function (article) {
+                    const articleDiv = $('<div class="article"></div>');
+                    articleDiv.append(`<h2>${article.title}</h2>`);
+                    articleDiv.append(`<p><a href="${article.url}" target="_blank">Read more</a></p>`);
+                    newsContainer.append(articleDiv);
+                });
+                }
+            }
+        });
+
+    </script>
+
+ <!-- Footer-->
+ <div id="footer">
+    <div class="container-2">
+        <div class="flex-container">
+            <div class="flex-child">
+                <p>
+                <div class="h2 text-left"><strong>Navigation</strong></div>
+                <a href="service.html">Our Service</a><br>
+                <a href="helpcenter.html">Help Center</a><br>
+                </p>
+            </div>
+            <div class="flex-child">
+                <p>
+
+                <div class="h2 text-left"><strong>About</strong></div>
+                <a href="AboutUs.html">About Us</a><br>
+
+                </p>
+            </div>
+            <!-- Social Media Links -->
+            <div class="flex-child">
+                <p>
+                    <!-- Share Plugin -->
+                    <h6 class="text-center">Share the best pet paradise to your loved ones!</h6>
+                    <div class="share text-center"></div>
+                    <!-- ends Share Plugin -->
+                </p>
+            </div>
+            
+            <div class="flex-child">
+                <p style="text-align: justify;">
+                    <a href="index.html"><img class="img-responsive" src="images/icon.png" alt="logo"
+                            width="80vw" height="70vw"></a>
+                    <br>
+                    <a href="tel:0181237654"><i class="phoneNo">018-123 7654</i></a>
+                    <br>
+                    <a href="mailto:qubypetshop@gmail.com"><i class="email"></i>
+                        qubypetshop@gmail.com</a>
+                    <br>
+                    <a
+                        href="https://www.google.com/maps/place/Ipoh+Parade,+105,+Jalan+Sultan+Abdul+Jalil,+31350+Ipoh,+Perak/@4.5951721,101.0896709,3a,75y,26.77h,90t/data=!3m6!1e1!3m4!1srHx7PEQcFG5gCOuN_YC-lw!2e0!7i16384!8i8192!4m7!3m6!1s0x31caec611a9d9c41:0xfe76e16d137449b4!8m2!3d4.5959134!4d101.0900944!10e5!16s%2Fg%2F11hzsky9vv?entry=ttu">
+                        <i> 105, Jalan Sultan Abdul Jalil, 31350 Ipoh, Perak</i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- ends Footer-->
+    
+    <script>
+        // Social Media Plugins
+        $(".share").jsSocials({
+            url: "https://qubypet.com",
+            text: "Let's try out QubyPet's pet care service!",
+            showLabel: false,
+            shares: ["twitter", "whatsapp", "facebook"]
+        });
+        // Social Media Plugins
+    </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var phoneNoInput = document.getElementById("phoneNo");
+        var messageInput = document.getElementById("message");
+
+        // Session Storage // 
+        function saveMessageToSessionStorage() {
+            var message = messageInput.value;
+            sessionStorage.setItem("message", message);
+        }
+
+        messageInput.addEventListener("blur", saveMessageToSessionStorage);
+
+        // Local Storage //
+        function saveDetailsToLocalStorage() {
+            var name = nameInput.value;
+            var email = emailInput.value;
+            var phoneNo = phoneNoInput.value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phoneNo", phoneNo);
+        }
+
+        nameInput.addEventListener("blur", saveDetailsToLocalStorage);
+        emailInput.addEventListener("blur", saveDetailsToLocalStorage);
+        phoneNoInput.addEventListener("blur", saveDetailsToLocalStorage);
+
+        });
+
+    </script>
+</body>
+
+</html>
